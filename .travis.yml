@@ -17,7 +17,7 @@ deploy:
   github_token: $GITHUB_API_KEY
   on:
     branch: master
-  local_dir: public
+  local_dir: yimeng/blog/public
   repo: yimeng/yimeng.github.com
   target_branch: master
   email: deploy@travis-ci.org
