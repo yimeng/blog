@@ -52,7 +52,8 @@ prometheus需要自己根据modbus协议自己写个exporter，正好研究prome
 4 学以致用，初中那些物理知识重新回顾下
 
 最终效果图：
-￼
+
+![ammeter](ammeter.png)￼
 
 https://bbs.hassbian.com/thread-5634-1-1.html
 https://bbs.hassbian.com/forum.php?mod=viewthread&tid=7736
