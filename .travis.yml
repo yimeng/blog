@@ -23,5 +23,5 @@ deploy:
   email: deploy@travis-ci.org
   name: deployment-bot
 after_deploy:
-  - curl -s  --form-string "token=$APP_TOKEN"  --form-string "user=$USER_KEY"  --form-string "message=hello world"  https://api.pushover.net/1/messages.json
+  - curl -s  --form-string "token=$APP_TOKEN"  --form-string "user=$USER_KEY"  --form-string "message=blog deployed"  https://api.pushover.net/1/messages.json
 
