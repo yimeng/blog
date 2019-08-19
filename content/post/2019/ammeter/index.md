@@ -6,6 +6,8 @@ date: 2019-08-11T17:36:49+08:00
 # 智能家居-家用功率监控
 智能家居-总功率监控
 
+
+
 ## 背景
 
 研究homelab机器的时候，忘记在哪个论坛里看到一个人的回复：家里整体功耗才是王道
@@ -58,7 +60,7 @@ modbus2tcp: 家里的串口设备也没有那么多，开始有同事建议用TT
 
 ### 最终效果图：
 
-![ammeter](ammeter.png)￼
+![ammeter](ammeter.png)
 
 ### 参考资料
 
@@ -67,6 +69,8 @@ modbus2tcp: 家里的串口设备也没有那么多，开始有同事建议用TT
 - https://bbs.hassbian.com/forum.php?mod=viewthread&tid=1662
 - https://bbs.hassbian.com/forum.php?mod=viewthread&tid=1472
 - https://bbs.hassbian.com/forum.php?mod=viewthread&tid=6081
+
+
 
 
 
