@@ -1,5 +1,5 @@
 ---
-title: "hugo养成记"
+title: "出租窝装修记"
 date: 2019-08-18T15:34:49+08:00
 ---
 
@@ -75,13 +75,117 @@ git lfs也是三部曲:
 
 ### Git remote
 
-说实话，这个还没有用上，不过
+说实话，这个还没有用上。原打算在本地生成之后一个push，然后推送到github和coding上的。
+
+不过用了CI，只能在CI的过程中生成好静态页，再推送到两个Git仓库中。还可能牵涉到配置文件域名的修改。尚未实践。
 
 ## CI
 
+在DevOps当道的今天，个人博客也不例外。其实本意应该是减少以前hexo的缓慢编译，以及减少击键次数。目前网上的教程大多是用travis做的，目前github自家的CI也出来了，可以尝试。
+
+下面是我的yaml，总结了几点改进建议和优化的地方，供参考：
+
+1. 吐槽下每次都要重新编译hugo，下载一堆的依赖，可以用docker去抹平这个过程提高速度。
+2. 用pushover将部署之后的git message通知到终端，了解目前的编译部署情况。
+3. 不足之处无法在pages上看到历史记录，不过将blog和pages分开。blog的仓库中还是有相关修改记录的。
+
+```yaml
+sudo: false
+
+language: go
+
+git:
+  depth: 1
+
+install: go get -v github.com/spf13/hugo
+
+script:
+
+- hugo
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+
+# token is set in travis-ci.org dashboard
+
+  github_token: $GITHUB_API_KEY
+  on:
+    branch: master
+  local_dir: public
+  repo: yimeng/yimeng.github.com
+  target_branch: master
+  email: deploy@travis-ci.org
+  name: deployment-bot
+after_deploy:
+
+- curl -s  --form-string "token=$APP_TOKEN"  --form-string "user=$USER_KEY"  --form-string "message=$(git --no-pager  log -n 1 --oneline)"  https://api.pushover.net/1/messages.json
+```
+
+
+
 ## 图片
 
+#### 管理方案
+
+先说下管理方案，网上大多是让你放到主题的static目录下。出于职业习惯，感觉这么搞似乎有些不妥。换个主题之后就凉凉了，虽说可以人肉移动，但也不利于后期的维护。而且最大的问题是无法在markdown编辑器中预览，相关的文件路径需要修改。
+
+参考了下往上的方案，发现hugo是可以将文章打包成文件夹的，在文件夹里放md文章和图片是一个比较不错的方案。至于是按照年份还是文章分类，这个因人而定吧。
+
+举个例子：
+
+```bash
+.
+├── about.md
+└── post
+    ├── 2019
+    │   ├── ammeter
+    │   │   ├── ammeter.png
+    │   │   └── index.md
+    │   ├── hugo
+    │   │   └── index.md
+    │   └── marslander.md
+    ├── hello.md
+    └── vagrant-alpine.md
+```
+
+about.md 是关于页面
+
+post目录下按照年份分类
+
+其它随时修改的或者记不起年份的可以单分出来，或者放到other目录里。
+
+
+
+#### 压缩工具
+
+ImgBot 定期扫描git仓库把可以处理的图片进行处理之后，合并到相应分支。
+
+tinning 免费的好像只能处理5M以下的图片，有相应的api可以调用。
+
+相应的图片压缩工具应该还有很多，但一般还是希望能够有原图，展现的时候使用压缩过的图。好比元数据存在一个地方，其它都是衍生的各种视图。
+
+所以，可能原始图片用LFS上传，然后经过处理用CI把处理好的放到相应的目录中这种模式比较好？但是LFS是否支持这种用git当自己的图片库的操作呢？或许上个CDN才是更好的做法？放到阿里云上的对象存储上好像可以自动处理大小以及压缩率。终于知道为什么程序员喜欢PaaS服务了。把你需要考虑的都考虑到了。
+
+#### 优化
+
+除了上面介绍的图片优化，还有一些开启http2 压缩js css字体等等，但我个人感觉，http2倒是有一定的意义，比起图片其它的可能都是小虾米（除非上M的js文件）。所以下一步优化还是在图片方面，先昧着良心用LFS吧。
+
 ## 主题
+
+以前会花费一周的时间找一个好看的主题，现在感觉不是那么的重要了。好看的皮囊太多了，hugo没几个。本着实用主义的原则，先把内容写起来再说。
+
+## 参考
+
+[Hugo 的文件管理方案]: https://isyin.cn/post/2018-05-03-hugo-%E7%9A%84%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E6%96%B9%E6%A1%88/
+[新手搭建Hogo静态博客教程（四）:使用优化]: http://zhaogaz.com/post/2018/newbie-start-hugo-blog-4/
+[使用 ImgBot 无损压缩博客中的图片]: https://mogeko.me/2019/066/
+[利用Hugo和Webpack搭建PWA个人网页]: https://www.valleyease.me/zh/2018/12/23/利用hugo和webpack搭建pwa个人网页/
+[Hugo 从入门到会用]: https://blog.olowolo.com/post/hugo-quick-start/
+
+
+
+
 
 
 
