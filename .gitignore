@@ -13,7 +13,7 @@ $RECYCLE.BIN/
 
 ### Hugo ###
 # Generated files by hugo
-/public/
+# /public/
 /resources/_gen/
 # /themes/
 
