@@ -27,6 +27,6 @@ jobs:
         with:
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
           publish_dir: ./public
-          external_repository: yimeng/yimeng.github.io
+          external_repository: yimeng/yimeng.github.com
           publish_branch: master
           force_orphan: true
