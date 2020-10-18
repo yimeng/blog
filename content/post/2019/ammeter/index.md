@@ -56,7 +56,7 @@ modbus2tcp: 家里的串口设备也没有那么多，开始有同事建议用TT
 
 ### 最终效果图：
 
-![ammeter](../../static/ammeter/ammeter.png)
+![ammeter](ammeter.png)
 
 ### 参考资料
 
