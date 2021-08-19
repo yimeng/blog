@@ -8,20 +8,22 @@ date: 2021-08-19T14:46:00+08:00
 
 ## google自己家
 
-[minikube]: https://kubernetes.io/zh/docs/setup/production-environment/tools/	
-[kubeadm]: https://kubernetes.io/docs/reference/setup-tools/kubeadm/
-[kops]: https://github.com/kubernetes/kops
-[Kubespray]: https://github.com/kubernetes-sigs/kubespray
+
+
+[minikube](https://kubernetes.io/zh/docs/setup/production-environment/tools/)
+[kubeadm](https://kubernetes.io/docs/reference/setup-tools/kubeadm/)
+[kops](https://github.com/kubernetes/kops)
+[Kubespray](https://github.com/kubernetes-sigs/kubespray)
 
 ## 第三方
 
 ### ubuntu
 
-[microk8s]: https://cn.ubuntu.com/blog/microk8s-ha-minimal-kubernetes
+[microk8s](https://cn.ubuntu.com/blog/microk8s-ha-minimal-kubernetes)
 
 ### 管理平台：
 
-[rancher]: https://rancher.com
-[kubesphere]: https://kubesphere.io/zh/
-[openshift]: https://www.redhat.com/zh/technologies/cloud-computing/openshift
+[rancher](https://rancher.com)
+[kubesphere](https://kubesphere.io/zh/)
+[openshift](https://www.redhat.com/zh/technologies/cloud-computing/openshift)
 
