@@ -9,7 +9,9 @@ date: 2021-08-19T14:46:00+08:00
 ## google自己家
 
 - [minikube](https://kubernetes.io/zh/docs/setup/production-environment/tools/)
+  - 很适合建立一个实验环境，Mac上也是用虚拟机给你搞，有mac版本。
 - [kubeadm](https://kubernetes.io/docs/reference/setup-tools/kubeadm/)
+  - 目前已经生产ready，除了需要改改仓库地址。其它的还算比较方便。直接上Linux折腾吧，Mac上好像不行。
 - [kops](https://github.com/kubernetes/kops)
 - [Kubespray](https://github.com/kubernetes-sigs/kubespray)
 
