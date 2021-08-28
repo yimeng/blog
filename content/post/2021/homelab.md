@@ -220,7 +220,7 @@ date: 2021-08-19T22:46:00+08:00
 
 可能看的不太直观，做了一个雷达图，可能更直观一些。
 
-![image-20210827024550661](https://yimeng.cn-bj.ufileos.com/blog/image-homelab.png)
+![image-20210827024550661](http://yimeng.cn-bj.ufileos.com/blog/image-homelab.png)
 
 
 
