@@ -21,5 +21,4 @@ $RECYCLE.BIN/
 hugo.exe
 hugo.darwin
 hugo.linux
-
-
+.hugo_build.lock
