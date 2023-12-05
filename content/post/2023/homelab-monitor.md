@@ -123,7 +123,7 @@ WantedBy=multi-user.target
 
 ![image-20231204110031249](http://pic.chenym.net/blog/image-20231204110031249.png)
 
-## 遗留问题：
+## 遗留问题
 
 CPU温度和功率是否有相关关系？
 
