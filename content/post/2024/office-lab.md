@@ -29,3 +29,6 @@ date: 2024-02-02T10:45:00+08:00
 https://github.com/yimeng/office-lab.git
 ```
 
+## 问题
+
+这个方案在runner那调用powershell或者cmd的时候会有一些问题，例如执行时间太长（调用vagrant的时候下载box），runner中看不到回显，排错问题等等。因此执行一些简单的任务还可以，用于ci操作系统镜像还是有点问题。可以建议将runner放到VirtualBox的linux的虚拟机中进行执行。避开windows没有管理员权限和调试的窘境。
