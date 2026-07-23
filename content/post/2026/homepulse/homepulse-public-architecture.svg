@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="960" viewBox="0 0 1600 960" role="img" aria-labelledby="title desc">
+  <title id="title">HomePulse 家庭数据中枢公开版架构</title>
+  <desc id="desc">从手机、家庭电表和智能家电，经由安全入口、Webhook 和 MQTT 进入时序数据库，并由 Grafana 与 Home Assistant 使用。</desc>
+  <defs>
+    <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse">
+      <path d="M42 0H0V42" fill="none" stroke="#1e293b" stroke-width="1" opacity=".55"/>
+    </pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000" flood-opacity=".28"/>
+    </filter>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto">
+      <path d="M2 2L12 7 2 12Z" fill="#94a3b8"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto">
+      <path d="M2 2L12 7 2 12Z" fill="#34d399"/>
+    </marker>
+    <style>
+      .bg{fill:#020617}.grid{fill:url(#grid)}
+      .title{font:700 44px Inter,"PingFang SC","Microsoft YaHei",sans-serif;fill:#e2e8f0}
+      .subtitle{font:500 18px Inter,"PingFang SC","Microsoft YaHei",sans-serif;fill:#94a3b8}
+      .lane{fill:#0f172a;stroke:#334155;stroke-width:1.5;rx:24;opacity:.94}
+      .laneTitle{font:700 18px Inter,"PingFang SC","Microsoft YaHei",sans-serif;fill:#cbd5e1}
+      .card{rx:16;stroke-width:2;filter:url(#shadow)}
+      .source{fill:#083344;stroke:#22d3ee}.edge{fill:#451a03;stroke:#f59e0b}
+      .app{fill:#052e2b;stroke:#34d399}.data{fill:#2e1065;stroke:#a78bfa}
+      .ha{fill:#082f49;stroke:#38bdf8}.repo{fill:#172554;stroke:#60a5fa}
+      .nodeTitle{font:700 20px Inter,"PingFang SC","Microsoft YaHei",sans-serif;fill:#f8fafc}
+      .nodeText{font:500 14px Inter,"PingFang SC","Microsoft YaHei",sans-serif;fill:#cbd5e1}
+      .tiny{font:500 12px Inter,"PingFang SC","Microsoft YaHei",sans-serif;fill:#94a3b8}
+      .flow{fill:none;stroke:#94a3b8;stroke-width:3;marker-end:url(#arrow)}
+      .flowGreen{fill:none;stroke:#34d399;stroke-width:4;marker-end:url(#arrowGreen)}
+      .pill{fill:#111827;stroke:#334155;rx:16}.label{font:700 13px Inter,"PingFang SC","Microsoft YaHei",sans-serif;fill:#e2e8f0}
+      .note{fill:#020617;stroke:#1e293b;rx:16}
+    </style>
+  </defs>
+  <rect class="bg" width="1600" height="960"/>
+  <rect class="grid" width="1600" height="960"/>
+
+  <text class="title" x="70" y="80">HomePulse 家庭数据中枢</text>
+  <text class="subtitle" x="72" y="116">把分散的家庭信号放进同一条时间线，再用于观察、推断与自动化</text>
+  <rect class="pill" x="1270" y="52" width="250" height="48"/>
+  <circle cx="1300" cy="76" r="7" fill="#34d399"/>
+  <text class="label" x="1318" y="81">公开版架构示意</text>
+
+  <rect class="lane" x="45" y="155" width="300" height="610"/>
+  <text class="laneTitle" x="80" y="200">数据来源</text>
+  <rect class="lane" x="385" y="155" width="270" height="610"/>
+  <text class="laneTitle" x="420" y="200">接入方式</text>
+  <rect class="lane" x="695" y="155" width="430" height="610"/>
+  <text class="laneTitle" x="730" y="200">采集与处理</text>
+  <rect class="lane" x="1165" y="155" width="390" height="610"/>
+  <text class="laneTitle" x="1200" y="200">数据与控制</text>
+
+  <rect class="card source" x="85" y="245" width="220" height="105"/>
+  <text class="nodeTitle" x="112" y="286">手机与可穿戴设备</text>
+  <text class="nodeText" x="112" y="316">个人健康指标</text>
+  <text class="tiny" x="112" y="338">主动上传 · 最小化字段</text>
+
+  <rect class="card source" x="85" y="410" width="220" height="105"/>
+  <text class="nodeTitle" x="112" y="451">手机通知事件</text>
+  <text class="nodeText" x="112" y="481">出行 · 电话 · 应用事件</text>
+  <text class="tiny" x="112" y="503">原始记录 + 结构化结果</text>
+
+  <rect class="card source" x="85" y="575" width="220" height="125"/>
+  <text class="nodeTitle" x="112" y="616">电表与智能家电</text>
+  <text class="nodeText" x="112" y="646">多回路电量 · 设备状态</text>
+  <text class="tiny" x="112" y="672">本地协议桥接</text>
+
+  <rect class="card edge" x="415" y="280" width="210" height="125"/>
+  <text class="nodeTitle" x="445" y="321">安全隧道</text>
+  <text class="nodeText" x="445" y="351">HTTPS Webhook</text>
+  <text class="tiny" x="445" y="377">少量入口 · 独立鉴权</text>
+
+  <rect class="card edge" x="415" y="540" width="210" height="125"/>
+  <text class="nodeTitle" x="445" y="581">MQTT</text>
+  <text class="nodeText" x="445" y="611">家庭消息总线</text>
+  <text class="tiny" x="445" y="637">状态上报 · 受控命令</text>
+
+  <rect class="card app" x="735" y="235" width="350" height="105"/>
+  <text class="nodeTitle" x="765" y="276">Webhook 接收器</text>
+  <text class="nodeText" x="765" y="306">校验 · 清洗 · 时间统一</text>
+  <text class="tiny" x="765" y="328">保留原始事件与标准化字段</text>
+
+  <rect class="card app" x="735" y="405" width="350" height="105"/>
+  <text class="nodeTitle" x="765" y="446">MQTT 采集器</text>
+  <text class="nodeText" x="765" y="476">电量指标 · 家电状态</text>
+  <text class="tiny" x="765" y="498">统一设备和回路元数据</text>
+
+  <rect class="card app" x="735" y="575" width="350" height="125"/>
+  <text class="nodeTitle" x="765" y="616">事件与场景推断</text>
+  <text class="nodeText" x="765" y="646">负载变化 · 设备动作 · 生活场景</text>
+  <text class="tiny" x="765" y="672">人工标注形成可验证样本</text>
+
+  <rect class="card data" x="1205" y="235" width="305" height="125"/>
+  <text class="nodeTitle" x="1235" y="276">GreptimeDB</text>
+  <text class="nodeText" x="1235" y="306">统一时间线存储</text>
+  <text class="tiny" x="1235" y="332">指标 · 事件 · 元数据 · 推断</text>
+
+  <rect class="card data" x="1205" y="420" width="305" height="105"/>
+  <text class="nodeTitle" x="1235" y="461">Grafana</text>
+  <text class="nodeText" x="1235" y="491">历史分析与可视化</text>
+
+  <rect class="card ha" x="1205" y="585" width="305" height="105"/>
+  <text class="nodeTitle" x="1235" y="626">Home Assistant</text>
+  <text class="nodeText" x="1235" y="656">实时状态与家庭自动化</text>
+
+  <path class="flow" d="M305 297C365 297 365 342 415 342"/>
+  <path class="flow" d="M305 462C365 462 365 365 415 365"/>
+  <path class="flowGreen" d="M305 637C355 637 365 602 415 602"/>
+  <path class="flow" d="M625 342C680 342 680 287 735 287"/>
+  <path class="flowGreen" d="M625 602C680 602 680 457 735 457"/>
+  <path class="flowGreen" d="M1085 287C1140 287 1140 297 1205 297"/>
+  <path class="flowGreen" d="M1085 457C1145 457 1145 320 1205 320"/>
+  <path class="flowGreen" d="M1085 637C1145 637 1145 342 1205 342"/>
+  <path class="flow" d="M1358 420V360"/>
+  <path class="flow" d="M1358 585V525"/>
+
+  <rect class="note" x="70" y="815" width="440" height="90"/>
+  <text class="nodeTitle" x="100" y="851">应用与数据库分离</text>
+  <text class="tiny" x="100" y="879">采集服务可以快速迭代，历史数据保持稳定</text>
+  <rect class="note" x="580" y="815" width="440" height="90"/>
+  <text class="nodeTitle" x="610" y="851">分析与控制分离</text>
+  <text class="tiny" x="610" y="879">Grafana 观察过去，Home Assistant 处理现在</text>
+  <rect class="note" x="1090" y="815" width="440" height="90"/>
+  <text class="nodeTitle" x="1120" y="851">隐私与安全边界</text>
+  <text class="tiny" x="1120" y="879">公开结构和方法，不公开地址、凭据与私人数据</text>
+</svg>
