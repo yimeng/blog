@@ -19,7 +19,7 @@ date: 2021-09-04T09:19:00+08:00
 
 
 
-![cloud-init](http://pic.chenym.net/blog/20220429084107.png)
+![cloud-init](https://cdn.jsdelivr.net/gh/yimeng/blog-pic@main/post/2021/cloud-init/20220429084107.png)
 
 ## 用户数据
 

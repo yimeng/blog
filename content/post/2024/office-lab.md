@@ -17,7 +17,7 @@ date: 2024-02-02T10:45:00+08:00
 
 ## 部署图
 
-![image-20240202104716512](http://pic.chenym.net/blog/image-20240202104716512.png)
+![image-20240202104716512](https://cdn.jsdelivr.net/gh/yimeng/blog-pic@main/post/2024/office-lab/image-20240202104716512.png)
 
 部署图如上，选取了gitea的一个二进制进行部署。然后使用cloudflare进行了泛域名解析，用traefik来进行域名的路由。gitea的runner负责在windows机器上执行各种命令。控制vagrant和VirtualBox来进行镜像打包。有时候这个机器的wifi可能不太好用，使用runner定时重启一下。别问我为啥不用windows自己的服务。没有管理员权限只能用这些骚操作了。
 

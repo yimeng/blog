@@ -9,7 +9,7 @@ date: 2022-05-03T09:19:00+08:00
 
 软件部分总体架构图如图绿色部分，主要分为采集、数据处理、存储和展现。
 
-![image-20220524140809738](http://pic.chenym.net/blog/image-20220524140809738.png)
+![image-20220524140809738](https://cdn.jsdelivr.net/gh/yimeng/blog-pic@main/post/2022/metts3/image-20220524140809738.png)
 
 ## 采集
 
@@ -73,4 +73,4 @@ grafana的托管的免费额度也是非常给力的
 
 关于展现可能还可以再说很多很多，比如是用纯数字展现还是仪表盘展现，折线图还需要哪些优化更好一些，甚至以前还跟同事讨论，为何监控都是黑色背景的（看起来酷 对于值夜班盯监控的人友好）等等。等有机会再说吧。
 
-![image-20220524143237430](http://pic.chenym.net/blog/image-20220524143237430.png)
+![image-20220524143237430](https://cdn.jsdelivr.net/gh/yimeng/blog-pic@main/post/2022/metts3/image-20220524143237430.png)

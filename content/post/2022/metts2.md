@@ -17,7 +17,7 @@ date: 2022-05-03T09:19:00+08:00
 
 ## 总体架构
 
-<img src="http://pic.chenym.net/blog/image-20220519120850488.png" alt="image-20220519120850488" style="zoom:50%;" />
+<img src="https://cdn.jsdelivr.net/gh/yimeng/blog-pic@main/post/2022/metts2/image-20220519120850488.png" alt="image-20220519120850488" style="zoom:50%;" />
 
 
 
@@ -27,7 +27,7 @@ date: 2022-05-03T09:19:00+08:00
 
 先说电表，大概是这个样子的。把电量表接到了空开的前面是因为，外面还有一个电表和空开。这样即使我家跳闸断电，只要外面的空开没有断。电能表还是可以工作的，配合检测端的UPS，是可以作为停电监测用的。（全停电冰箱里的肉杀伤力极强，别问我怎么知道的）
 
-<img src="http://pic.chenym.net/blog/mett2-202005191236.jpg" alt="mett2-202005191236" style="zoom: 25%;" />
+<img src="https://cdn.jsdelivr.net/gh/yimeng/blog-pic@main/post/2022/metts2/mett2-202005191236.jpg" alt="mett2-202005191236" style="zoom: 25%;" />
 
 
 
@@ -41,31 +41,31 @@ date: 2022-05-03T09:19:00+08:00
 
 可以看到供电部分使用2和3针脚。找了一根没用的USB线，把其中的1,4针脚接出来。
 
-![image-20220519140619019](http://pic.chenym.net/blog/image-20220519140619019.png)
+![image-20220519140619019](https://cdn.jsdelivr.net/gh/yimeng/blog-pic@main/post/2022/metts2/image-20220519140619019.png)
 
 
 
 光猫的USB1,4针脚，接入转换器的2,3针脚。完成供电。
 
-![image-20220519140710009](http://pic.chenym.net/blog/image-20220519140710009.png)
+![image-20220519140710009](https://cdn.jsdelivr.net/gh/yimeng/blog-pic@main/post/2022/metts2/image-20220519140710009.png)
 
 ### 转换器的数据连接
 
 转换器的1,4针脚，接入电能表的数据AB接口，完成数据的接入。
 
-![image-20220519141228880](http://pic.chenym.net/blog/image-20220519141228880.png)
+![image-20220519141228880](https://cdn.jsdelivr.net/gh/yimeng/blog-pic@main/post/2022/metts2/image-20220519141228880.png)
 
 转换器与电脑之前的网线连接：
 
-![img](http://pic.chenym.net/blog/ammeter.png)
+![img](https://cdn.jsdelivr.net/gh/yimeng/blog-pic@main/post/2022/metts2/ammeter.png)
 
-![image-20220519141800455](http://pic.chenym.net/blog/image-20220519141800455.png)
+![image-20220519141800455](https://cdn.jsdelivr.net/gh/yimeng/blog-pic@main/post/2022/metts2/image-20220519141800455.png)
 
 ### 电脑访问转换器页面
 
 剩下就是很简单的插上网线，转换器会获取到DHCP地址。通过web页面进行访问即可。剩下的就是如何通过软件来获取信息了。
 
-![image-20220519141335968](http://pic.chenym.net/blog/image-20220519141335968.png)
+![image-20220519141335968](https://cdn.jsdelivr.net/gh/yimeng/blog-pic@main/post/2022/metts2/image-20220519141335968.png)
 
 ## 后记
 

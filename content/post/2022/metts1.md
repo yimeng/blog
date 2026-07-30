@@ -76,7 +76,7 @@ TCP：这个就是大家正常使用的，但是对于设备要求最好是性�
 
 
 
-![image-20220519112724354](http://pic.chenym.net/blog/image-20220519112724354.png)
+![image-20220519112724354](https://cdn.jsdelivr.net/gh/yimeng/blog-pic@main/post/2022/metts1/image-20220519112724354.png)
 
 
 

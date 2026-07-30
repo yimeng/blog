@@ -8,7 +8,7 @@ date: 2023-12-05T13:19:00+08:00
 
 ## 部署图
 
-<img src="http://pic.chenym.net/blog/image-20231205132619401.png" alt="image-20231205132619401" style="zoom:60%;" />
+<img src="https://cdn.jsdelivr.net/gh/yimeng/blog-pic@main/post/2023/homelab-monitor-metrics/image-20231205132619401.png" alt="image-20231205132619401" style="zoom:60%;" />
 
 在homelab中加入了本地的prometheus，在remote write给grafana cloud的时候，将自己理解并且需要的指标写到grafana cloud中。本地根据磁盘大小进行存放，云端尽量让每个指标都发挥人民币的价值。
 
