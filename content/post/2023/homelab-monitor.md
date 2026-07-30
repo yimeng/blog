@@ -121,7 +121,7 @@ WantedBy=multi-user.target
 
 ## 成果
 
-![image-20231204110031249](http://pic.chenym.net/blog/image-20231204110031249.png)
+![image-20231204110031249](https://cdn.jsdelivr.net/gh/yimeng/blog-pic@main/post/2023/homelab-monitor/image-20231204110031249.png)
 
 ## 遗留问题
 
