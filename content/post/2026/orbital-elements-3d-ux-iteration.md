@@ -20,11 +20,11 @@ draft: false
 - **P4 视觉元素自相矛盾**：地球经纬网的汇聚点不在南北极，而是落在赤道附近（几何体极轴没对齐场景的 +Z 轴），和"北极"标注打架。
 - **P5 信息分散冗余**：场景文字、左下信息面板、底部折叠说明三处信息各自为政，近地点高度还在两处重复出现、格式不一致。
 
-![修改前默认视图：标签重叠、纯色地球、细线](https://cdn.jsdelivr.net/gh/yimeng/blog-pic@main/ux-iter-before-default.png)
+![修改前默认视图：标签重叠、纯色地球、细线](https://cdn.jsdelivr.net/gh/yimeng/blog-pic@main/post/2026/orbital-elements-3d-ux-iteration/ux-iter-before-default.png)
 
 *修改前：近地点/升交点/卫星标签挤在一起，文字直接压在地球上。*
 
-![修改前特写：3D 精灵标签巨大且被视口裁切](https://cdn.jsdelivr.net/gh/yimeng/blog-pic@main/ux-iter-before-closeup.png)
+![修改前特写：3D 精灵标签巨大且被视口裁切](https://cdn.jsdelivr.net/gh/yimeng/blog-pic@main/post/2026/orbital-elements-3d-ux-iteration/ux-iter-before-closeup.png)
 
 *修改前特写：拉近看地球时，3D 精灵标签变得巨大、模糊，甚至被视口裁掉一半。*
 
@@ -36,13 +36,13 @@ draft: false
 
 **点位文字移出场景，合并为右上角图例，通过颜色关联标记。** 解决 P1。对应 Nielsen #8"美观与极简"——消除重叠信息；关联方式用的是格式塔相似性，也就是 Norman 说的自然映射：不需要文字指着实体，用户靠颜色自己完成"图例 ↔ 场景标记"的对应。
 
-![修改后默认视图：图例整合在右上角，场景干净](https://cdn.jsdelivr.net/gh/yimeng/blog-pic@main/ux-iter-after-default.png)
+![修改后默认视图：图例整合在右上角，场景干净](https://cdn.jsdelivr.net/gh/yimeng/blog-pic@main/post/2026/orbital-elements-3d-ux-iteration/ux-iter-after-default.png)
 
 *修改后：点位文字全部进右上角图例（含实时数据），场景里只剩图形本身。*
 
 **轴标签和根数符号改为 HTML 覆盖层：固定字号、每帧投影定位、投影飞出视口时钉在视口边缘；X/Z 箭头随视图同步伸缩。** 解决 P2。对应 Nielsen #1"系统状态可见性"——关键导航信息在任何缩放级别都不能丢失，可见性不仅是文字，也包括图形指示。
 
-![修改后特写：标签钉在视口边缘，箭头同步收缩](https://cdn.jsdelivr.net/gh/yimeng/blog-pic@main/ux-iter-after-closeup.png)
+![修改后特写：标签钉在视口边缘，箭头同步收缩](https://cdn.jsdelivr.net/gh/yimeng/blog-pic@main/post/2026/orbital-elements-3d-ux-iteration/ux-iter-after-closeup.png)
 
 *修改后特写（与修改前同一机位）：地球贴图、清晰的小标签、"北极 (Z)""春分点 (X)"钉在视口边缘，箭头收缩到标签旁。*
 
@@ -50,7 +50,7 @@ draft: false
 
 **帮助体系改为渐进披露 + 情境帮助**：总说明收进标题旁的 ? 图标（点击开关、点外部关闭）；悬停某个根数标题只弹出该根数的解释；点击场景里的 Ω/ν 符号，弹出的就是这个符号的含义。说明默认收起降低初始认知负荷，需要时又出现在问题发生的位置——比让用户翻文档更进一步，对应 Nielsen #10 的情境化实现。
 
-![点击场景中的 ν 符号弹出对应解释](https://cdn.jsdelivr.net/gh/yimeng/blog-pic@main/ux-iter-after-tooltip.png)
+![点击场景中的 ν 符号弹出对应解释](https://cdn.jsdelivr.net/gh/yimeng/blog-pic@main/post/2026/orbital-elements-3d-ux-iteration/ux-iter-after-tooltip.png)
 
 *情境帮助：点击场景里的 ν 符号，弹出真近点角的解释，再次点击或点其他处消失。*
 
