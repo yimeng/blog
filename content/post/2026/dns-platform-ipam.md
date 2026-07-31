@@ -1,7 +1,8 @@
 ---
-title: "IPAM：企业 DNS 的另一半"
+title: "内网 DNS 平台（5）：IPAM——企业 DNS 的另一半"
 date: 2026-08-04T00:00:00+08:00
 draft: false
+tags: ["DNS", "平台工程"]
 ---
 
 ## 背景

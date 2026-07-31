@@ -2,6 +2,7 @@
 title: "DNS不只是A记录：从Homelab到企业平台的一些思考"
 date: 2026-07-23T00:00:00+08:00
 draft: false
+tags: ["DNS", "平台工程"]
 ---
 
 ## 背景
