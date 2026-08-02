@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 150" fill="none">
+  <g stroke="currentColor" stroke-width="1.35" opacity=".52">
+    <path d="M32 34H536M32 47H536M32 60H536M32 73H536M32 86H536"/>
+    <path d="M38 28V92M536 34V86M292 34V86"/>
+  </g>
+  <g fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <text x="43" y="78" font-family="Times New Roman, serif" font-size="69" stroke="none">𝄞</text>
+    <text x="79" y="42" font-family="Georgia, serif" font-size="23" stroke="none">♯</text>
+    <text x="102" y="45" font-family="Georgia, serif" font-size="18" stroke="none">3</text>
+    <text x="102" y="63" font-family="Georgia, serif" font-size="18" stroke="none">4</text>
+
+    <!-- D, G-A, B-C | dotted D, G, G : opening of Minuet in G major -->
+    <ellipse cx="143" cy="47" rx="7.2" ry="5.2" stroke="none"/><path d="M150 47V13" stroke-width="2"/>
+    <ellipse cx="190" cy="73" rx="7.2" ry="5.2" stroke="none"/><path d="M197 73V39" stroke-width="2"/><ellipse cx="218" cy="67" rx="7.2" ry="5.2" stroke="none"/><path d="M225 67V34" stroke-width="2"/><path d="M197 39L225 34" stroke-width="3"/>
+    <ellipse cx="247" cy="60" rx="7.2" ry="5.2" stroke="none"/><path d="M254 60V27" stroke-width="2"/><ellipse cx="275" cy="54" rx="7.2" ry="5.2" stroke="none"/><path d="M282 54V21" stroke-width="2"/><path d="M254 27L282 21" stroke-width="3"/>
+
+    <ellipse cx="334" cy="47" rx="7.2" ry="5.2" stroke="none"/><path d="M341 47V13" stroke-width="2"/><circle cx="350" cy="38" r="1.8" stroke="none"/>
+    <ellipse cx="410" cy="73" rx="7.2" ry="5.2" stroke="none"/><path d="M417 73V39" stroke-width="2"/><ellipse cx="479" cy="73" rx="7.2" ry="5.2" stroke="none"/><path d="M486 73V39" stroke-width="2"/>
+  </g>
+</svg>

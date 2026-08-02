@@ -1,0 +1,12 @@
+{{ define "main" }}
+<div class="wrap page">
+  <div class="eyebrow">{{ if eq .Kind "term" }}Category{{ else }}Archive{{ end }}</div>
+  <h1>{{ .Title }}</h1>
+  {{ if eq .Kind "taxonomy" }}
+    <div class="taxonomy-cloud">{{ range .Data.Terms.Alphabetical }}<a href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }} <small>{{ .Count }}</small></a>{{ end }}</div>
+  {{ else }}
+    {{ with .Content }}<div class="taxonomy-intro">{{ . }}</div>{{ end }}
+    <div class="post-list">{{ range .Pages }}<a class="post" href="{{ .RelPermalink }}"><time>{{ .Date.Format "2006.01.02" }}</time><div class="post-main"><div class="post-taxonomy">{{ range .Params.categories }}<span class="category">{{ . }}</span>{{ end }}{{ range .Params.tags }}<span>#{{ . }}</span>{{ end }}</div><h3>{{ .Title }}</h3><p>{{ .Summary | plainify | truncate 90 }}</p></div><span class="arrow">↗</span></a>{{ end }}</div>
+  {{ end }}
+</div>
+{{ end }}

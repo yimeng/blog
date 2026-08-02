@@ -1,0 +1,33 @@
+baseURL = "https://git.yimeng.ch/"
+locale = "zh-CN"
+title = "梦开始的地方"
+enableRobotsTXT = true
+theme = "contrast-hugo"
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[params]
+  author = "yimeng"
+  role = "可靠性工程 · DevOps 实践者 · 智能家居玩家"
+  description = "把可靠性工程带回家，也把家的温度带进系统里。"
+  location = "Shanghai, CN"
+
+[menu]
+  [[menu.main]]
+    name = "首页"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "文章"
+    url = "/posts/"
+    weight = 2
+  [[menu.main]]
+    name = "实验室"
+    url = "/#lab"
+    weight = 3
+  [[menu.main]]
+    name = "关于"
+    url = "/about/"
+    weight = 4
