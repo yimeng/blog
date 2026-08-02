@@ -1,0 +1,4 @@
+baseURL = "https://git.yimeng.ch/"
+languageCode = "zh-cn"
+title = "出租窝"
+theme = "contrast-hugo"
