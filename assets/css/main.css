@@ -89,5 +89,30 @@ footer { padding: 24px 0; border-top: 1px solid var(--line); color: var(--muted)
 .remote-status-link strong { margin-left: auto; color: var(--lime); font-size: 1.1rem; font-weight: 500; }
 .remote-status-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--aqua); box-shadow: 0 0 11px rgba(110, 231, 200, .75); }
 @media (max-width: 760px) { .remote-status-link { margin-top: 18px; } }
+
+/* Article reading rhythm: clearer Chinese text without changing the terminal UI. */
+.page article {
+  color: #d0ddd2;
+  font-family: "Noto Sans CJK SC", "Source Han Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 1.06rem;
+  line-height: 2;
+  letter-spacing: .01em;
+}
+.page article p { margin: 0 0 1.25em; }
+.page article h2, .page article h3 { color: #e0ebe2; line-height: 1.45; }
+.page article h2 { margin-top: 2.4em; }
+.page article h3 { margin-top: 1.8em; }
+.page article strong { color: #e0ebe2; font-weight: 600; }
+.about-page article {
+  color: #c5d2c7;
+  font-family: "Noto Serif CJK SC", "Source Han Serif SC", "Songti SC", STSong, serif;
+  font-size: 1.06rem;
+  line-height: 2.05;
+  letter-spacing: .015em;
+}
+.about-page article > p:first-child {
+  font-family: "Noto Serif CJK SC", "Source Han Serif SC", "Songti SC", STSong, serif;
+  line-height: 1.7;
+}
 .taxonomy-intro { max-width: 620px; margin: -12px 0 34px; padding: 16px 18px; border-left: 2px solid var(--lime); color: #b8c9ba; background: rgba(16, 42, 27, .28); line-height: 1.8; }
 .taxonomy-intro p { margin: 0; }
