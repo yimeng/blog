@@ -116,3 +116,8 @@ footer { padding: 24px 0; border-top: 1px solid var(--line); color: var(--muted)
 }
 .taxonomy-intro { max-width: 620px; margin: -12px 0 34px; padding: 16px 18px; border-left: 2px solid var(--lime); color: #b8c9ba; background: rgba(16, 42, 27, .28); line-height: 1.8; }
 .taxonomy-intro p { margin: 0; }
+
+/* Keep the original expanding layout, but avoid animating height frame by frame. */
+.home-log .log-note {
+  transition: opacity .16s ease, transform .16s ease;
+}
