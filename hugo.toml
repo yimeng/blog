@@ -28,6 +28,10 @@ theme = "contrast-hugo"
     url = "/#lab"
     weight = 3
   [[menu.main]]
+    name = "写作"
+    url = "/writing/"
+    weight = 4
+  [[menu.main]]
     name = "关于"
     url = "/about/"
-    weight = 4
+    weight = 5

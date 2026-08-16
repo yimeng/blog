@@ -2,6 +2,7 @@
 title: "内网 DNS 平台（3）：给内网域名起名字——短域、.internal 与递归转发"
 date: 2026-08-02T00:00:00+08:00
 draft: false
+categories: ["系统"]
 tags: ["DNS", "平台工程"]
 ---
 

@@ -2,6 +2,7 @@
 title: "内网 DNS 平台（10）：边界——一个 DNS 平台该做什么、不该做什么"
 date: 2026-08-09T00:00:00+08:00
 draft: false
+categories: ["系统"]
 tags: ["DNS", "平台工程"]
 ---
 

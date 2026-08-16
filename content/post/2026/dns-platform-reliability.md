@@ -2,6 +2,7 @@
 title: "内网 DNS 平台（8）：可靠性——从 MVP 单机到 HA 的演进"
 date: 2026-08-07T00:00:00+08:00
 draft: false
+categories: ["系统"]
 tags: ["DNS", "平台工程"]
 ---
 

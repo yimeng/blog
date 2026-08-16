@@ -2,7 +2,7 @@
 title: "从健康数据到家庭智能平台：HomePulse 是怎么长出来的"
 date: 2026-08-08T00:00:00+08:00
 draft: false
-categories: ["智能家居"]
+categories: ["家"]
 tags: ["HomePulse", "健康数据", "Home Assistant", "GreptimeDB", "AI"]
 summary: "一开始只是想保存自己的健康数据，后来接入了家庭设备、手机通知和 AI 场景判断，最后发现最需要解决的问题变成了系统治理。"
 ---

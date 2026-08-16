@@ -2,7 +2,7 @@
 title: "把 SRE 思维带回家：三个小实践"
 date: 2026-06-14
 summary: "备份、可观测性、渐进式改动，让家庭自动化也能稳定而从容。"
-categories: ["工程实践"]
+categories: ["系统"]
 tags: ["SRE", "备份", "自动化"]
 ---
 

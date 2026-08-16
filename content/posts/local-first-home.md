@@ -2,7 +2,7 @@
 title: "为什么我的智能家居选择本地优先"
 date: 2026-07-03
 summary: "可用性、隐私和可维护性，是我拒绝把一切交给云端的原因。"
-categories: ["智能家居"]
+categories: ["家"]
 tags: ["Home Assistant", "隐私", "本地优先"]
 ---
 

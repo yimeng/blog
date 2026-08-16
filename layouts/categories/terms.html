@@ -1,0 +1,28 @@
+{{ define "main" }}
+<div class="wrap category-index">
+  <div class="eyebrow">WAYS OF READING</div>
+  <h1>分类</h1>
+  <p class="category-index-lead">这里不按技术名词划分，而按我持续书写的三个世界：系统、家与生活。</p>
+  <div class="category-grid">
+    <a class="category-card" href="{{ "/categories/系统/" | relURL }}">
+      <span class="category-card-kicker">SYSTEMS</span>
+      <h2>系统</h2>
+      <p>工作中的判断、产品与平台的取舍，以及工程实践留下的方法和路径。</p>
+      <span class="category-card-arrow">进入系统 <b>↗</b></span>
+    </a>
+    <a class="category-card" href="{{ "/categories/家/" | relURL }}">
+      <span class="category-card-kicker">HOME</span>
+      <h2>家</h2>
+      <p>家庭网络、Homelab、智能家居与数据；让技术安静地服务日常。</p>
+      <span class="category-card-arrow">进入家 <b>↗</b></span>
+    </a>
+    <a class="category-card" href="{{ "/categories/生活/" | relURL }}">
+      <span class="category-card-kicker">LIFE</span>
+      <h2>生活</h2>
+      <p>日常、记忆与行走，也记录故乡、成长、迁徙和人与时间的关系。</p>
+      <span class="category-card-arrow">进入生活 <b>↗</b></span>
+    </a>
+  </div>
+  <p class="category-index-note">想了解分类、系列与标签如何配合，可以读 <a href="{{ "/writing/" | relURL }}">写作说明</a>。</p>
+</div>
+{{ end }}

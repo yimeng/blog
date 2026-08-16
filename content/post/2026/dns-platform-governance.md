@@ -2,6 +2,7 @@
 title: "内网 DNS 平台（7）：治理与运营——护栏、僵尸与纠偏"
 date: 2026-08-06T00:00:00+08:00
 draft: false
+categories: ["系统"]
 tags: ["DNS", "平台工程"]
 ---
 

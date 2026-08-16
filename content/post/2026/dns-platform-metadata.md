@@ -2,6 +2,7 @@
 title: "内网 DNS 平台（6）：IP 溯源与元数据——一次自我纠偏"
 date: 2026-08-05T00:00:00+08:00
 draft: false
+categories: ["系统"]
 tags: ["DNS", "平台工程"]
 ---
 

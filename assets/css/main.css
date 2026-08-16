@@ -117,6 +117,28 @@ footer { padding: 24px 0; border-top: 1px solid var(--line); color: var(--muted)
 .taxonomy-intro { max-width: 620px; margin: -12px 0 34px; padding: 16px 18px; border-left: 2px solid var(--lime); color: #b8c9ba; background: rgba(16, 42, 27, .28); line-height: 1.8; }
 .taxonomy-intro p { margin: 0; }
 
+.category-index { padding: 80px 0 110px; }
+.category-index h1 { margin: 12px 0 16px; font-size: clamp(2.7rem, 5vw, 4.5rem); }
+.category-index-lead { max-width: 540px; margin: 0; color: var(--muted); font-size: 1.05rem; line-height: 1.8; }
+.category-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 42px; }
+.category-card { display: flex; min-height: 275px; flex-direction: column; padding: 26px; border: 1px solid var(--line); border-radius: 12px; background: linear-gradient(145deg, rgba(19, 47, 31, .76), rgba(8, 21, 14, .48)); transition: transform .2s ease, border-color .2s ease, background .2s ease; }
+.category-card:hover { transform: translateY(-4px); border-color: rgba(184, 240, 90, .55); background: linear-gradient(145deg, rgba(28, 62, 38, .85), rgba(10, 27, 17, .56)); }
+.category-card:focus-visible { outline: 1px solid var(--lime); outline-offset: 4px; }
+.category-card-kicker { color: var(--aqua); font: .67rem ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .12em; }
+.category-card h2 { margin: 30px 0 10px; font-size: 1.6rem; letter-spacing: -.05em; }
+.category-card p { margin: 0; color: var(--muted); font-size: .92rem; line-height: 1.7; }
+.category-card-arrow { margin-top: auto; padding-top: 25px; color: #d2e1d4; font: .75rem ui-monospace, SFMono-Regular, Menlo, monospace; }
+.category-card-arrow b { margin-left: 5px; color: var(--lime); font-size: 1rem; }
+.category-index-note { margin: 28px 0 0; color: var(--muted); font-size: .86rem; }
+.category-index-note a { color: var(--lime); }
+
+@media (max-width: 760px) {
+  .category-index { padding: 58px 0 76px; }
+  .category-grid { grid-template-columns: 1fr; margin-top: 30px; }
+  .category-card { min-height: 210px; }
+  .category-card h2 { margin-top: 22px; }
+}
+
 /* Keep the original expanding layout, but avoid animating height frame by frame. */
 .home-log .log-note {
   transition: opacity .16s ease, transform .16s ease;

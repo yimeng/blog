@@ -2,6 +2,7 @@
 title: "从家用功率监控到家庭数据中枢：HomePulse 的一次再出发"
 date: 2026-07-24T00:00:00+08:00
 draft: false
+categories: ["家"]
 ---
 
 ## 背景

@@ -2,6 +2,7 @@
 title: "内网 DNS 平台（1）：一个域名等了两天"
 date: 2026-07-31T10:00:00+08:00
 draft: false
+categories: ["系统"]
 tags: ["DNS", "平台工程"]
 ---
 
