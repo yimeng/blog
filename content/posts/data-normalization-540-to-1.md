@@ -1,10 +1,11 @@
 ---
-title: "数据归一化工程：从 540 张表到 1 张表"
+title: "数据归一化工程；从 540 张表到 1 张表"
 date: 2026-11-15
-summary: "measurement_attr: entity_id 导致每实体一张表（540 张）。override_measurement 统一单表，entity_id 作 tag，跨源分析一条 SQL。"
-categories: ['智能家居', '架构']
-tags: ['数据归一化', 'GreptimeDB', '表设计', '跨源分析']
+summary: "measurement_attr 导致每实体一张表（540 张）。override_measurement 统一单表，entity_id 作 tag，跨源分析一条 SQL。"
+categories: ["智能家居", "架构"]
+tags: ["数据归一化", "GreptimeDB", "表设计", "跨源分析"]
 ---
+
 
 
 ## 问题：表爆炸是怎么发生的

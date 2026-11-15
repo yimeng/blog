@@ -1,10 +1,11 @@
 ---
-title: "时序数据库选型实战：观测留 GT，目录放 PG"
+title: "时序数据库选型实战；观测留 GT，目录放 PG"
 date: 2026-11-15
 summary: "时序库不支持 UPDATE，目录只能 DELETE+INSERT。观测留时序库，目录放关系库，跨库方向必须是 PG → GT。"
-categories: ['智能家居', '架构']
-tags: ['时序数据库', 'PostgreSQL', 'GreptimeDB', '数据架构']
+categories: ["智能家居", "架构"]
+tags: ["时序数据库", "PostgreSQL", "GreptimeDB", "数据架构"]
 ---
+
 
 
 ## 问题：目录数据该放哪？
