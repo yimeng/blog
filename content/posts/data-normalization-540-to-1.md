@@ -6,7 +6,9 @@ categories: ["智能家居", "架构"]
 tags: ["数据归一化", "GreptimeDB", "表设计", "跨源分析"]
 ---
 
-## 第一性原理：表爆炸是设计缺陷
+# 数据归一化工程：从 540 张表到 1 张表
+
+## 起因：表爆炸是怎么发生的
 
 HA 的 InfluxDB 集成默认配置 `measurement_attr: entity_id`，导致**每个实体自动建一张表**：
 
@@ -25,7 +27,9 @@ sensor.lumi_temperature     → 表 3
 
 **这不是"数据多"，这是"设计缺陷"**。表爆炸的本质是**没有统一的数据模型**。
 
-## 解法：override_measurement 统一单表
+## 打算：试试 override_measurement 统一单表
+
+我最初的想法是"能不能让所有数据进一张表"。于是改了 HA 的 InfluxDB 配置：
 
 ```yaml
 influxdb:
@@ -47,7 +51,9 @@ ha_observations
 - 实体从"表名"变成"tag 值"
 - 跨源分析可以用一条 SQL 完成
 
-## 统一表的价值：跨源分析一条 SQL
+## 发现：统一表才能跨源分析
+
+改完后，**跨源分析可以用一条 SQL 完成**：
 
 ```sql
 -- 看"泵启动时，入户水压和流量怎么变，同时耗电多少"
