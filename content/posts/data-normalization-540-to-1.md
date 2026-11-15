@@ -6,8 +6,6 @@ categories: ["智能家居", "架构"]
 tags: ["数据归一化", "GreptimeDB", "表设计", "跨源分析"]
 ---
 
-# 数据归一化工程：从 540 张表到 1 张表
-
 ## 起因：表爆炸是怎么发生的
 
 HA 的 InfluxDB 集成默认配置 `measurement_attr: entity_id`，导致**每个实体自动建一张表**：
