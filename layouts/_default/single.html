@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{ $pages := where site.RegularPages "Section" "in" (slice "posts" "post") }}
 <div class="wrap page article-page">
-  <div class="eyebrow">{{ .Section }} · {{ .Date.Format "2006.01.02" }}</div>
+  <div class="eyebrow">{{ .Section }}{{ if not .Date.IsZero }} · {{ .Date.Format "2006.01.02" }}{{ end }}</div>
   <h1>{{ .Title }}</h1>
   <div class="article-taxonomy">{{ range .GetTerms "categories" }}<a class="category" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end }}{{ range .GetTerms "tags" }}<a href="{{ .RelPermalink }}">#{{ .LinkTitle }}</a>{{ end }}</div>
   {{ $stats := partial "wordstats.html" . }}

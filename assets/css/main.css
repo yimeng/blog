@@ -577,3 +577,102 @@ body.search-open { overflow: hidden; }
 :root[data-theme="light"] .post-taxonomy span,
 :root[data-theme="light"] .article-taxonomy a { background: rgba(22, 121, 95, .09); color: #1f5c4a; }
 :root[data-theme="light"] .article-taxonomy .category { background: rgba(22, 121, 95, .14); }
+
+/* ---------- 21. 亮色主题：全站文字对比度修正 ----------
+   背景 #f6f8f4 下，原暗色主题的浅色文字（#c8d6ca 等）对比度只有 1.3~1.8，
+   这里按「主文字/次文字/弱文字」三档统一压深。 */
+:root[data-theme="light"] {
+  --text-strong: #14261b;   /* 标题、正文主体 */
+  --text-body: #2c4a36;     /* 正文段落 */
+  --text-soft: #4d6656;     /* 次要说明 */
+  --text-faint: #607a68;    /* 元信息、时间 */
+}
+
+/* 首页 hero */
+:root[data-theme="light"] .hero h1,
+:root[data-theme="light"] .hero h1 em { color: #14261b; }
+:root[data-theme="light"] .hero h1::after { color: #16795f; }
+:root[data-theme="light"] .hero .lead { color: #2c4a36; border-left-color: rgba(74, 143, 24, .45); }
+:root[data-theme="light"] .home-moments,
+:root[data-theme="light"] .home-moments span { color: #4d6656; }
+:root[data-theme="light"] .home-moments span { border-color: rgba(20, 60, 38, .16); background: rgba(255, 255, 255, .6); }
+:root[data-theme="light"] .care-gestures span { color: #5a7263; border-color: rgba(20, 60, 38, .14); background: rgba(255, 255, 255, .5); }
+
+/* 首页终端卡片 */
+:root[data-theme="light"] .terminal,
+:root[data-theme="light"] .terminal-copy,
+:root[data-theme="light"] .terminal strong { color: #24402c; }
+:root[data-theme="light"] .terminal .muted,
+:root[data-theme="light"] .muted { color: #5f7368; }
+:root[data-theme="light"] .terminal .command { color: #3f7d10; }
+:root[data-theme="light"] .warm-status { color: #8a5a12; border-top-color: rgba(20, 60, 38, .14); }
+:root[data-theme="light"] .warm-status span { color: #b4650f; text-shadow: none; }
+:root[data-theme="light"] .home-log,
+:root[data-theme="light"] .home-log .log-command { color: #2c4a36; }
+:root[data-theme="light"] .home-log .log-note { color: #5a7263; }
+:root[data-theme="light"] .home-log b { color: #10614c; }
+:root[data-theme="light"] .home-log p { color: #8a5a12; }
+
+/* 首页统计 / 卡片 / 实验室 / 文章列表 */
+:root[data-theme="light"] .stats { background: rgba(255, 255, 255, .66); }
+:root[data-theme="light"] .stat b { color: #3f7d10; }
+:root[data-theme="light"] .stat span { color: #4d6656; }
+:root[data-theme="light"] .card p,
+:root[data-theme="light"] .section-note,
+:root[data-theme="light"] .about p { color: #4d6656; }
+:root[data-theme="light"] .status-panel,
+:root[data-theme="light"] .stack { background: rgba(255, 255, 255, .7); }
+:root[data-theme="light"] .service small { color: #5f7368; }
+:root[data-theme="light"] .ok { color: #16795f; }
+:root[data-theme="light"] .tag { color: #2c4a36; border-color: rgba(20, 60, 38, .16); background: rgba(74, 143, 24, .08); }
+:root[data-theme="light"] .post p { color: #4d6656; }
+:root[data-theme="light"] .post h3 { color: #14261b; }
+:root[data-theme="light"] .post time { color: #16795f; }
+:root[data-theme="light"] .post:hover { background: rgba(74, 143, 24, .05); }
+
+/* 首页总结块 + about */
+:root[data-theme="light"] .home-summary { background: linear-gradient(120deg, rgba(255, 255, 255, .9), rgba(238, 244, 236, .7)); }
+:root[data-theme="light"] .summary-copy h2 { color: #14261b; }
+:root[data-theme="light"] .summary-side p { color: #4d6656; }
+:root[data-theme="light"] .summary-link { color: #3f5c4a; }
+:root[data-theme="light"] .home-summary .stat b { color: #3f7d10; }
+:root[data-theme="light"] .home-summary .stat span { color: #5f7368; }
+:root[data-theme="light"] .quote { color: #1f3a2a; }
+:root[data-theme="light"] .roots { background: rgba(255, 255, 255, .68); }
+:root[data-theme="light"] .root-list span { color: #4d6656; }
+:root[data-theme="light"] .life-mark small { color: #16795f; }
+:root[data-theme="light"] .category-card p { color: #4d6656; }
+:root[data-theme="light"] .category-card-arrow { color: #3f5c4a; }
+:root[data-theme="light"] .category-card { background: linear-gradient(145deg, rgba(255, 255, 255, .92), rgba(240, 246, 238, .8)); }
+
+/* 列表 / 归档 / 分类 / 标签页 */
+:root[data-theme="light"] .taxonomy-cloud a { color: #2c4a36; background: rgba(255, 255, 255, .75); }
+:root[data-theme="light"] .taxonomy-intro { color: #2c4a36; background: rgba(74, 143, 24, .07); }
+:root[data-theme="light"] .archive-list time { color: #607a68; }
+:root[data-theme="light"] .archive-lead { color: #4d6656; }
+:root[data-theme="light"] .nav-links a.nav-keep { color: #2c4a36; }
+
+/* 关于页 / 文章页补充 */
+:root[data-theme="light"] .about-page h1,
+:root[data-theme="light"] .about-page article,
+:root[data-theme="light"] .about-page article h2,
+:root[data-theme="light"] .about-page article h3,
+:root[data-theme="light"] .about-page article > p:first-child { color: #14261b; }
+:root[data-theme="light"] .about-page article blockquote { color: #1f3a2a; }
+:root[data-theme="light"] .about-page article h3 + p { color: #3f5c4a; background: rgba(255, 255, 255, .6); }
+:root[data-theme="light"] .page article strong { color: #14261b; }
+:root[data-theme="light"] .page article h2,
+:root[data-theme="light"] .page article h3 { color: #14261b; }
+:root[data-theme="light"] .page .eyebrow { color: #16795f; }
+:root[data-theme="light"] footer { color: #607a68; border-top-color: rgba(20, 60, 38, .14); }
+
+/* 搜索弹窗 */
+:root[data-theme="light"] .search-modal .pagefind-ui__result-excerpt { color: #3f5c4a; }
+
+/* ---------- 22. 亮色主题：乐谱叠层（hover 卡片）线条反色 ---------- */
+:root[data-theme="light"] .score-overlay { color: #14261b; }
+:root[data-theme="light"] .score-overlay .score-meta span { color: #8a5a12; }
+:root[data-theme="light"] .score-overlay .score-meta small,
+:root[data-theme="light"] .score-overlay p { color: #4d6656; }
+:root[data-theme="light"] .score-overlay::after { filter: none; mix-blend-mode: multiply; opacity: .85; }
+:root[data-theme="light"] .score-overlay .listen-button { color: #8a5a12; border-color: rgba(20, 60, 38, .2); background: rgba(255, 255, 255, .8); }
