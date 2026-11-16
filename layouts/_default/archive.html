@@ -1,0 +1,18 @@
+{{ define "main" }}
+{{ $pages := where site.RegularPages "Section" "in" (slice "posts" "post") }}
+<div class="wrap page archive-page">
+  <div class="eyebrow">Archive</div>
+  <h1>归档</h1>
+  <p class="archive-lead">共 {{ len $pages }} 篇 · 按年份浏览</p>
+  {{ range $pages.GroupByDate "2006" }}
+  <section class="archive-year">
+    <h2 class="archive-year-title">{{ .Key }}<small>{{ len .Pages }} 篇</small></h2>
+    <ul class="archive-list">
+      {{ range .Pages }}
+      <li><time>{{ .Date.Format "01-02" }}</time><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+      {{ end }}
+    </ul>
+  </section>
+  {{ end }}
+</div>
+{{ end }}

@@ -1,0 +1,6 @@
+{{/* 中文字数统计：CJK 字符 + 拉丁词，阅读时长按 400 字/分钟 */}}
+{{ $plain := .Content | plainify }}
+{{ $cjk := len (findRE "[\\x{4e00}-\\x{9fa5}]" $plain) }}
+{{ $total := add $cjk .WordCount }}
+{{ $mins := math.Ceil (div (float $total) 400.0) }}
+{{ return (dict "chars" $total "minutes" (int $mins)) }}

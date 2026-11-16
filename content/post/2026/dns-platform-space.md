@@ -4,6 +4,7 @@ date: 2026-08-01T00:00:00+08:00
 draft: false
 categories: ["系统"]
 tags: ["DNS", "平台工程"]
+series: ["内网 DNS 平台"]
 ---
 
 ## 背景

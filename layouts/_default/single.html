@@ -1,1 +1,65 @@
-{{ define "main" }}<div class="wrap page"><div class="eyebrow">{{ .Section }} · {{ .Date.Format "2006.01.02" }}</div><h1>{{ .Title }}</h1><div class="article-taxonomy">{{ range .GetTerms "categories" }}<a class="category" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end }}{{ range .GetTerms "tags" }}<a href="{{ .RelPermalink }}">#{{ .LinkTitle }}</a>{{ end }}</div><article>{{ .Content }}</article></div>{{ end }}
+{{ define "main" }}
+{{ $pages := where site.RegularPages "Section" "in" (slice "posts" "post") }}
+<div class="wrap page article-page">
+  <div class="eyebrow">{{ .Section }} · {{ .Date.Format "2006.01.02" }}</div>
+  <h1>{{ .Title }}</h1>
+  <div class="article-taxonomy">{{ range .GetTerms "categories" }}<a class="category" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end }}{{ range .GetTerms "tags" }}<a href="{{ .RelPermalink }}">#{{ .LinkTitle }}</a>{{ end }}</div>
+  {{ $stats := partial "wordstats.html" . }}
+  <div class="article-meta">
+    <span>{{ $stats.chars }} 字</span>
+    <span>约 {{ $stats.minutes }} 分钟</span>
+    {{ with .Lastmod }}{{ if ne (.Format "2006-01-02") ($.Date.Format "2006-01-02") }}<span>更新于 {{ .Format "2006-01-02" }}</span>{{ end }}{{ end }}
+  </div>
+
+  {{ with .Params.series }}
+  <nav class="series-nav">
+    <span class="series-label">系列 · {{ if reflect.IsSlice . }}{{ delimit . " / " }}{{ else }}{{ . }}{{ end }}</span>
+  </nav>
+  {{ end }}
+
+  {{ $toc := .TableOfContents }}
+  <div class="article-body-wrap">
+    {{ if and $toc (gt (len $toc) 100) }}
+    <details class="toc-inline">
+      <summary>本文目录</summary>
+      {{ $toc }}
+    </details>
+    {{ end }}
+    <article>{{ .Content }}</article>
+    {{ if and $toc (gt (len $toc) 100) }}
+    <aside class="toc-side">
+      <div class="toc-side-title">目录</div>
+      {{ $toc }}
+    </aside>
+    {{ end }}
+  </div>
+
+  {{ if or .PrevInSection .NextInSection }}
+  <nav class="post-nav">
+    {{ with .PrevInSection }}<a class="post-nav-item prev" href="{{ .RelPermalink }}"><span>← 上一篇</span><b>{{ .Title }}</b></a>{{ else }}<span></span>{{ end }}
+    {{ with .NextInSection }}<a class="post-nav-item next" href="{{ .RelPermalink }}"><span>下一篇 →</span><b>{{ .Title }}</b></a>{{ end }}
+  </nav>
+  {{ end }}
+
+  {{ if site.Params.giscus.repoId }}
+  <section class="comments">
+    <h2 class="comments-title">评论</h2>
+    <script src="https://giscus.app/client.js"
+      data-repo="{{ site.Params.giscus.repo }}"
+      data-repo-id="{{ site.Params.giscus.repoId }}"
+      data-category="{{ site.Params.giscus.category }}"
+      data-category-id="{{ site.Params.giscus.categoryId }}"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="top"
+      data-theme="{{ if eq site.Params.giscus.theme "auto" }}preferred_color_scheme{{ else }}{{ site.Params.giscus.theme }}{{ end }}"
+      data-lang="zh-CN"
+      crossorigin="anonymous"
+      async>
+    </script>
+  </section>
+  {{ end }}
+</div>
+{{ end }}

@@ -1,0 +1,42 @@
+{{/* OG / Twitter 卡片 + 主题初始化 */}}
+{{ $site := site.Title }}
+{{ $desc := "" }}
+{{ $ogImage := "" }}
+{{ if .IsPage }}
+  {{ $desc = (.Summary | plainify | truncate 140) }}
+  {{ $cover := .Params.cover }}
+  {{ $slug := .File.BaseFileName }}
+  {{ if $cover }}
+    {{ $ogImage = $cover | absURL }}
+  {{ else if (fileExists (printf "static/og/%s.png" $slug)) }}
+    {{ $ogImage = printf "/og/%s.png" $slug | absURL }}
+  {{ else }}
+    {{ $ogImage = "/og/og-default.png" | absURL }}
+  {{ end }}
+{{ else }}
+  {{ $desc = site.Params.description }}
+  {{ $ogImage =  "/og/og-default.png" | absURL }}
+{{ end }}
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:title" content="{{ if .IsPage }}{{ .Title }}{{ else }}{{ $site }}{{ end }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ $site }}">
+<meta property="og:image" content="{{ $ogImage }}">
+<meta property="og:locale" content="zh_CN">
+{{ if .IsPage }}<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+<meta property="article:section" content="{{ .Section }}">
+{{ range .Params.categories }}<meta property="article:tag" content="{{ . }}">{{ end }}
+{{ range .Params.tags }}<meta property="article:tag" content="{{ . }}">{{ end }}{{ end }}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ if .IsPage }}{{ .Title }}{{ else }}{{ $site }}{{ end }}">
+<meta name="twitter:description" content="{{ $desc }}">
+<meta name="twitter:image" content="{{ $ogImage }}">
+<script>
+(function(){
+  try {
+    var saved = localStorage.getItem('theme');
+    if (saved === 'light' || saved === 'dark') document.documentElement.setAttribute('data-theme', saved);
+  } catch(e){}
+})();
+</script>

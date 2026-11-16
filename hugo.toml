@@ -8,6 +8,20 @@ theme = "contrast-hugo"
   category = "categories"
   tag = "tags"
 
+[markup]
+  [markup.highlight]
+    style = "dracula"
+    lineNos = false
+    noClasses = true
+    tabWidth = 2
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+    ordered = false
+
 [params]
   author = "yimeng"
   role = "可靠性工程 · DevOps 实践者 · 智能家居玩家"
@@ -35,3 +49,14 @@ theme = "contrast-hugo"
     name = "关于"
     url = "/about/"
     weight = 5
+  [[menu.main]]
+    name = "归档"
+    url = "/archives/"
+    weight = 6
+
+[params.giscus]
+  repo = "yimeng/blog"
+  repoId = ""
+  category = "Announcements"
+  categoryId = ""
+  theme = "transparent_dark"
