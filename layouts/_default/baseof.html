@@ -3,8 +3,22 @@
 (function(){
   function init(){
     var dark = document.documentElement.getAttribute('data-theme') !== 'light';
+    var vars = dark
+      ? { background:'#07110c', mainBkg:'#10231a', nodeBorder:'#3d6b52',
+          primaryColor:'#10231a', primaryTextColor:'#edf4ee',
+          primaryBorderColor:'#3d6b52', lineColor:'#6ee7c8', textColor:'#dbe8dd',
+          clusterBkg:'#0c1a12', clusterBorder:'#2c4a38', titleColor:'#b8f05a',
+          edgeLabelBackground:'#07110c',
+          fontFamily:'PingFang SC, Lantinghei SC, Microsoft Yahei, sans-serif' }
+      : { background:'#f6f8f4', mainBkg:'#f5faf2', nodeBorder:'#4a8f18',
+          primaryColor:'#f5faf2', primaryTextColor:'#14261b', primaryBorderColor:'#4a8f18',
+          secondaryColor:'#e9f2e4', tertiaryColor:'#f5faf2', nodeTextColor:'#1f3a2a',
+          lineColor:'#2f6b12', textColor:'#1f3a2a',
+          clusterBkg:'#eef4ec', clusterBorder:'#c3d6c8', titleColor:'#2f6b12',
+          edgeLabelBackground:'#f6f8f4',
+          fontFamily:'PingFang SC, Lantinghei SC, Microsoft Yahei, sans-serif' };
     mermaid.initialize({ startOnLoad: true, theme: dark ? 'dark' : 'default',
-      themeVariables: dark ? { background:'#07110c', primaryColor:'#10231a', primaryTextColor:'#edf4ee', primaryBorderColor:'#6ee7c8', lineColor:'#6ee7c8', fontFamily:'PingFang SC, Lantinghei SC, Microsoft Yahei, sans-serif' } : {} });
+                         themeVariables: vars, flowchart: { curve: 'basis', padding: 14 } });
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();

@@ -45,6 +45,15 @@ SQL statement is not supported, keyword: UPDATE
 
 ## 那让 GT 跨库查 PG 不就行了？
 
+两类数据的天性不同，落点也必须不同：
+
+{{< mermaid >}}
+flowchart LR
+    o["观测数据<br/>只追加、不可变"] -->|写入| gt[("GreptimeDB<br/>时序")]
+    d["目录数据<br/>频繁修改"] -->|upsert| pg[("PostgreSQL<br/>关系型")]
+    pg -.->|"查询时按需关联"| gt
+{{< /mermaid >}}
+
 既然目录不该放时序库，那放回 PostgreSQL，让 GreptimeDB 跨库去 JOIN 不就行了？
 
 这个想法听起来很合理，于是我兴冲冲地去试 GT 的 external table（外部表）。我把各种可能的语法都试了一遍：

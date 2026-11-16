@@ -36,6 +36,21 @@ sensor.kitchen_fridge_power → 一张表
 
 ## 一个配置项，540 变 1
 
+改一个配置项，结构就变了：
+
+{{< mermaid >}}
+flowchart LR
+    subgraph B["改造前：一实体一表"]
+        b1["sensor.pump_pressure"]
+        b2["sensor.water_pressure"]
+        b3["… 共 540 张"]
+    end
+    subgraph A["改造后：单表 + tag"]
+        a1[("ha_observations<br/>entity_id 作为 tag")]
+    end
+    B -->|"override_measurement"| A
+{{< /mermaid >}}
+
 查了文档，答案是一个配置：
 
 ```yaml

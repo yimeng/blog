@@ -21,6 +21,16 @@ tags: ["数据驯化", "数据治理", "IoT", "数据质量"]
 
 ## 4C 是什么
 
+四个阶段不是流水线，是闭环：
+
+{{< mermaid >}}
+flowchart LR
+    c1["Catalog<br/>编目"] --> c2["Calibrate<br/>标定"]
+    c2 --> c3["Corroborate<br/>印证"]
+    c3 --> c4["Guard<br/>守护"]
+    c4 -->|"新设备 / 新状态码"| c1
+{{< /mermaid >}}
+
 四个阶段：**Catalog（编目）、Calibrate（标定）、Corroborate（印证）、Guard（守护）**。
 
 它要回答四个递进的问题：

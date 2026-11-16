@@ -74,6 +74,28 @@ HA 的 attributes 种类是不可控的。我昨天辛辛苦苦把表收窄到 8
 
 ## 最终的六张表
 
+两条独立链路，各自落到三张表：
+
+{{< mermaid >}}
+flowchart TB
+    subgraph D["直采方向（事实源）"]
+        d1["MQTT 设备<br/>泵 / 热水器 / 冰箱"]
+        d2["电表<br/>HTTP SSE"]
+        d3["水表<br/>native API"]
+    end
+    subgraph H["HA 方向（全量镜像）"]
+        h1["Home Assistant<br/>state_changed"]
+    end
+    rpc1["Redpanda<br/>mapping 白名单"]
+    rpc2["Redpanda<br/>ws-bridge"]
+    d1 --> rpc1
+    d2 --> rpc1
+    d3 --> rpc1
+    h1 --> rpc2
+    rpc1 --> t1[("obs_numeric<br/>obs_event<br/>obs_raw")]
+    rpc2 --> t2[("ha_numeric<br/>ha_event<br/>ha_raw")]
+{{< /mermaid >}}
+
 ```
                    直采方向（事实源）            HA 方向（全量 + 事件）
    数值   →      obs_numeric    |    ha_numeric
