@@ -1,5 +1,5 @@
 <!doctype html><html lang="{{ site.Language.Lang }}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}"><title>{{ if .IsHome }}{{ site.Title }} — {{ site.Params.role }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>{{ partial "head-extra.html" . }}{{ $style := resources.Get "css/main.css" | minify | fingerprint }}<link rel="stylesheet" href="{{ $style.RelPermalink }}">
-{{ if .HasShortcode "mermaid" }}<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script><script>
+{{ if .HasShortcode "mermaid" }}<script src="/js/mermaid.min.js?v=11.17.2"></script><script>
 (function(){
   function init(){
     var dark = document.documentElement.getAttribute('data-theme') !== 'light';
