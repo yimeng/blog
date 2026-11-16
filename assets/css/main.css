@@ -676,3 +676,25 @@ body.search-open { overflow: hidden; }
 :root[data-theme="light"] .score-overlay p { color: #4d6656; }
 :root[data-theme="light"] .score-overlay::after { filter: none; mix-blend-mode: multiply; opacity: .85; }
 :root[data-theme="light"] .score-overlay .listen-button { color: #8a5a12; border-color: rgba(20, 60, 38, .2); background: rgba(255, 255, 255, .8); }
+
+/* ---------- 23. 亮色主题：CTA 按钮 / 远程状态卡 ---------- */
+:root[data-theme="light"] .cta { color: #ffffff; background: #2f7d1a; }
+:root[data-theme="light"] .cta:hover { background: #276814; }
+:root[data-theme="light"] .cta.quiet-link { color: #2f6b12; background: transparent; }
+:root[data-theme="light"] .home-summary .summary-link,
+:root[data-theme="light"] .summary-link span { color: #2f6b12; }
+
+/* 远程状态卡（music-player.js 注入） */
+:root[data-theme="light"] .remote-status-link {
+  color: #2c4a36;
+  border-color: rgba(20, 60, 38, .16);
+  background: rgba(255, 255, 255, .85);
+}
+:root[data-theme="light"] .remote-status-link:hover {
+  border-color: rgba(47, 125, 26, .5);
+  background: rgba(47, 125, 26, .06);
+}
+:root[data-theme="light"] .remote-status-link b { color: #14261b; }
+:root[data-theme="light"] .remote-status-link small { color: #5f7368; }
+:root[data-theme="light"] .remote-status-link strong { color: #2f6b12; }
+:root[data-theme="light"] .remote-status-dot { background: #16795f; box-shadow: 0 0 8px rgba(22, 121, 95, .5); }
